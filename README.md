@@ -7,6 +7,7 @@
 [![No Telemetry](https://img.shields.io/badge/Telemetry-None-111827?style=for-the-badge)](PRIVACY.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-f59e0b?style=for-the-badge)](LICENSE)
 [![Static Verify](https://img.shields.io/badge/Static_Verify-Passing-22c55e?style=for-the-badge)](scripts/verify_extension.py)
+[![GitHub Release](https://img.shields.io/github/v/release/Vega-Starboard/vega-security-header-lens?style=for-the-badge&logo=github)](https://github.com/Vega-Starboard/vega-security-header-lens/releases)
 [![shields.io](https://img.shields.io/badge/Badges-shields.io-blue?style=for-the-badge)](https://shields.io/)
 
 > A Firefox-first, read-only WebExtension for analyzing HTTP security response
