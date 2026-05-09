@@ -1,0 +1,222 @@
+:root {
+  color-scheme: dark;
+  --bg: #0f1218;
+  --panel: #181e27;
+  --panel-2: #222a36;
+  --text: #f5f7fb;
+  --muted: #a8b3c3;
+  --line: #303a49;
+  --good: #54d6a5;
+  --warn: #ffd166;
+  --info: #7eb6ff;
+  --danger: #ff7b8a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 460px;
+  min-height: 560px;
+  margin: 0;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(126, 182, 255, 0.18), transparent 32%),
+    radial-gradient(circle at 88% 12%, rgba(84, 214, 165, 0.13), transparent 28%),
+    var(--bg);
+  color: var(--text);
+  font: 14px/1.45 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.app-header {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.mark {
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(126, 182, 255, 0.6);
+  border-radius: 8px;
+  background:
+    linear-gradient(90deg, transparent 44%, var(--info) 45% 55%, transparent 56%),
+    linear-gradient(0deg, transparent 44%, var(--good) 45% 55%, transparent 56%),
+    var(--panel);
+  box-shadow: 0 0 22px rgba(126, 182, 255, 0.22);
+}
+
+h1 {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 0;
+}
+
+p {
+  margin: 2px 0 0;
+  color: var(--muted);
+}
+
+main {
+  display: grid;
+  gap: 14px;
+  padding: 16px;
+}
+
+.notice,
+.target,
+.status,
+.raw,
+.finding,
+.scoreboard > div {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(24, 30, 39, 0.92);
+}
+
+.notice {
+  padding: 10px 12px;
+  color: #d9e8ff;
+}
+
+.target {
+  display: grid;
+  gap: 6px;
+  padding: 10px 12px;
+}
+
+#targetUrl {
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+
+#permissionState {
+  color: var(--warn);
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.actions .primary,
+.actions #clearButton {
+  grid-column: 1 / -1;
+}
+
+button {
+  min-height: 38px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel-2);
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  border-color: var(--info);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.48;
+}
+
+.primary {
+  border-color: rgba(126, 182, 255, 0.65);
+  background: linear-gradient(180deg, rgba(126, 182, 255, 0.23), rgba(126, 182, 255, 0.1));
+}
+
+.scoreboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.scoreboard > div {
+  padding: 12px;
+}
+
+.scoreboard span {
+  display: block;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.scoreboard small {
+  color: var(--muted);
+}
+
+.status {
+  min-height: 24px;
+  padding: 8px 10px;
+  color: var(--muted);
+}
+
+.status.error {
+  color: var(--danger);
+}
+
+.findings {
+  display: grid;
+  gap: 8px;
+  max-height: 250px;
+  overflow: auto;
+}
+
+.finding {
+  padding: 10px;
+}
+
+.finding h2 {
+  margin: 0 0 6px;
+  font-size: 13px;
+}
+
+.finding p {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.finding.good {
+  border-color: rgba(84, 214, 165, 0.5);
+}
+
+.finding.warn {
+  border-color: rgba(255, 209, 102, 0.58);
+}
+
+.finding.info {
+  border-color: rgba(126, 182, 255, 0.45);
+}
+
+.raw {
+  padding: 10px 12px;
+}
+
+summary {
+  cursor: pointer;
+}
+
+dl {
+  display: grid;
+  gap: 6px;
+  margin: 10px 0 0;
+}
+
+dt {
+  color: var(--info);
+  font-weight: 700;
+}
+
+dd {
+  margin: 0 0 8px;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+  font-size: 12px;
+}

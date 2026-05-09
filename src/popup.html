@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vega Security Header Lens</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="mark" aria-hidden="true"></div>
+      <div>
+        <h1>Security Header Lens</h1>
+        <p>Read-only response header analysis</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="notice">
+        Authorized review only. This extension observes response headers for
+        user-granted origins. It does not modify traffic, read bodies, read
+        cookies, or upload telemetry.
+      </section>
+
+      <section class="target">
+        <span id="targetUrl">No active HTTP(S) page.</span>
+        <strong id="permissionState">Permission unknown</strong>
+      </section>
+
+      <div class="actions">
+        <button id="grantButton" class="primary" type="button">Grant Current Origin</button>
+        <button id="refreshButton" type="button">Refresh Lens</button>
+        <button id="copyButton" type="button" disabled>Copy Markdown</button>
+        <button id="exportButton" type="button" disabled>Export JSON</button>
+        <button id="clearButton" type="button">Clear Local Captures</button>
+      </div>
+
+      <section class="scoreboard" aria-live="polite">
+        <div>
+          <span id="scoreValue">0</span>
+          <small>score</small>
+        </div>
+        <div>
+          <span id="gradeValue">No capture</span>
+          <small>grade</small>
+        </div>
+      </section>
+
+      <section id="status" class="status">Ready.</section>
+      <section id="findings" class="findings" aria-label="Header findings"></section>
+      <details class="raw">
+        <summary>Observed security headers</summary>
+        <dl id="headersList"></dl>
+      </details>
+    </main>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

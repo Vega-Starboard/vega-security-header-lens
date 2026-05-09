@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-labelledby="title">
+  <title id="title">Vega Security Header Lens</title>
+  <rect width="48" height="48" rx="9" fill="#10131a"/>
+  <path d="M11 14h17M11 24h25M11 34h14" fill="none" stroke="#7eb6ff" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="34" cy="31" r="7" fill="none" stroke="#54d6a5" stroke-width="3"/>
+  <path d="m39 36 4 4" fill="none" stroke="#54d6a5" stroke-width="3" stroke-linecap="round"/>
+</svg>
